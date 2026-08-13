@@ -1,13 +1,23 @@
+.bg {
+  background-color: hsl(195deg, 20%, 86%);
+  position: fixed;
+  bottom: 0;
+  height: 350px;
+  width: 100%;
+}
+
 .characterEditor {
   padding-top: 128px;
   padding-bottom: 64px;
 }
 
 .maxWidthWrapper {
+  position: relative;
 }
 
 .header {
   padding-bottom: 64px;
+  width: 65%;
 }
 
 .title {
@@ -24,7 +34,48 @@
 }
 
 .characterWrapper {
+  position: fixed;
+  top: 128px;
+  left: 55%;
+  width: 480px;
+  min-height: 500px;
 }
 
 .controlColumn {
+  width: 50%;
+}
+
+@media (max-width: 440px) {
+  .maxWidthWrapper {
+    position: relative;
+    padding: 0;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .bg {
+    height: 300px;
+  }
+
+  .characterEditor {
+    padding-top: 300px;
+    padding-bottom: 0;
+  }
+
+  .characterWrapper {
+    position: fixed;
+    top: 30px;
+    left: 0;
+    height: 500px;
+  }
+
+  .controlColumn {
+    width: 100%;
+    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
 }
